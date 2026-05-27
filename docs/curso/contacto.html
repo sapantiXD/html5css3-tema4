@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Contacto - Curso HTML5 y CSS3</title>
+  <meta name="description" content="Formulario de contacto">
+  <meta name="author" content="Alejandro Amat">
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+
+  <main>
+    <div id="contenedorFormulario">
+      <h1>Contáctenos</h1>
+
+      <form id="contacto" method="post" action="#">
+
+        <!-- Campo nombre con datalist de usuarios válidos -->
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          required
+          placeholder="Escriba su nombre"
+          list="nombres-validos"
+          autocomplete="off">
+        <label for="nombre"></label>
+
+        <datalist id="nombres-validos">
+          <option value="alex">
+          <option value="juan">
+          <option value="ana">
+          <option value="pedro">
+        </datalist>
+
+        <!-- Campo correo -->
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          required
+          placeholder="Escriba su email"
+          autocomplete="off">
+        <label for="correo"></label>
+
+        <!-- Área de mensaje -->
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          required
+          placeholder="Su mensaje…"></textarea>
+
+        <!-- Botón de envío -->
+        <input type="submit" id="enviar" value="Enviar">
+
+      </form>
+    </div>
+  </main>
+
+  <script src="scripts/contacto.js"></script>
+</body>
+</html>

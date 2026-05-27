@@ -1,0 +1,193 @@
+/* =========================================================
+   Fuente Aguafina Script desde Google Fonts
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap');
+
+/* =========================================================
+   Reset
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:invalid { box-shadow: none; }
+
+/* =========================================================
+   Sección main: fondo y centrado
+   ========================================================= */
+
+main {
+  background: url(../imgs/fondoForm.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* =========================================================
+   Contenedor del formulario
+   ========================================================= */
+
+#contenedorFormulario {
+  position: relative;
+  display: inline-block;
+  margin: 50px;
+  width: 600px;
+  padding: 20px 50px;
+  background: rgba(200, 200, 200, 0.7);
+  text-align: left;
+  box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================================================
+   Título "Contáctenos"
+   ========================================================= */
+
+#contenedorFormulario h1 {
+  position: absolute;
+  top: -16px;
+  left: 490px;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: 'Aguafina Script', cursive;
+  font-style: italic;
+  color: #333;
+  font-size: 1.6em;
+  letter-spacing: 5px;
+  text-shadow: 0px 0px 2px #777;
+  padding: 0px 10px;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   Estilos comunes para inputs y textarea (excepto botón)
+   ========================================================= */
+
+#contacto input:not([type=submit]),
+#contacto textarea {
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+  box-shadow:
+    0px 1px 4px rgba(0, 0, 0, 0.3),
+    inset 0px 0px 40px rgba(0, 0, 0, 0.1);
+  color: black;
+  font-weight: bold;
+  padding: 1px 4px 1px 45px;
+  margin-bottom: 10px;
+  transition: all 0.4s ease-in;
+}
+
+/* =========================================================
+   Campos nombre y correo
+   ========================================================= */
+
+#nombre,
+#correo {
+  height: 32px;
+  width: 330px;
+}
+
+/* Imágenes de icono de fondo */
+#nombre {
+  background: url(../imgs/icon-nombre.png) no-repeat 10px center;
+  background-size: auto 20px;
+}
+
+#correo {
+  background: url(../imgs/icon-correo.png) no-repeat 10px center;
+  background-size: auto 20px;
+}
+
+/* Al enfocar: ancho expandido y sombra blanca */
+#nombre:focus,
+#correo:focus {
+  width: 370px;
+  box-shadow: 0px 0px 12px rgb(255, 255, 255);
+}
+
+/* Validación correcta al enfocar */
+#nombre:focus:valid {
+  background:
+    url(../imgs/icon-nombre.png) no-repeat 10px center,
+    url(../imgs/valid.png)       no-repeat 390px center;
+  background-size: auto 20px, auto 20px;
+}
+
+/* Validación incorrecta al enfocar */
+#nombre:focus:invalid {
+  background:
+    url(../imgs/icon-nombre.png) no-repeat 10px center,
+    url(../imgs/invalid.png)     no-repeat 390px center;
+  background-size: auto 20px, auto 20px;
+}
+
+#correo:focus:valid {
+  background:
+    url(../imgs/icon-correo.png) no-repeat 10px center,
+    url(../imgs/valid.png)       no-repeat 390px center;
+  background-size: auto 20px, auto 20px;
+}
+
+#correo:focus:invalid {
+  background:
+    url(../imgs/icon-correo.png) no-repeat 10px center,
+    url(../imgs/invalid.png)     no-repeat 390px center;
+  background-size: auto 20px, auto 20px;
+}
+
+/* =========================================================
+   Asterisco de campo requerido
+   Selecciona los inputs requeridos cuyo hermano siguiente
+   sea un <label>, y añade ' *' después de ese label.
+   ========================================================= */
+
+input:required + label::after {
+  content: ' *';
+  color: #c00;
+  font-weight: bold;
+}
+
+/* =========================================================
+   Campo mensaje (textarea)
+   ========================================================= */
+
+#mensaje {
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  width: 90%;
+  height: 150px;
+  background: url(../imgs/icon-mensaje.png) no-repeat 10px 10px;
+  background-size: auto 20px;
+  resize: vertical;
+}
+
+#mensaje:focus {
+  box-shadow: 0px 0px 12px rgb(255, 255, 255);
+}
+
+/* =========================================================
+   Botón Enviar
+   ========================================================= */
+
+#enviar {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #434343;
+  color: white;
+  background: linear-gradient(to bottom, #5e5e5e, #2a2a2a);
+  box-shadow: inset 0px 1px 1px #353535;
+  cursor: pointer;
+  font-size: 0.95em;
+  font-weight: normal;
+  width: auto;
+}
+
+#enviar:hover {
+  background: linear-gradient(to top, #5e5e5e, #2a2a2a);
+}
